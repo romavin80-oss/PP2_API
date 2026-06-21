@@ -1,0 +1,44 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyInterpreterInspection" enabled="true" level="INFORMATION" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="INFORMATION" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="asgiref" />
+          <option value="Django" />
+          <option value="python-dotenv" />
+          <option value="sqlparse" />
+          <option value="tzdata" />
+          <option value="blinker" />
+          <option value="click" />
+          <option value="colorama" />
+          <option value="itsdangerous" />
+          <option value="numpy" />
+          <option value="pandas" />
+          <option value="python-dateutil" />
+          <option value="six" />
+          <option value="Flask" />
+          <option value="Jinja2" />
+          <option value="MarkupSafe" />
+          <option value="Werkzeug" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="djangorestframework" />
+          <option value="celery" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="api.tests.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
