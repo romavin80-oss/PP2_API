@@ -1,0 +1,17 @@
+Index: utils.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>def add(a,b):\r\n    if isinstance(a, (int, float)) and isinstance(b, (int, float)):\r\n        return a+b\r\n    return a+b\r\n    raise TypeError\r\n\r\ndef product(a,b):\r\n    return a*b\r\n\r\ndef subtract(a,b):\r\n    return a-b\r\n\r\ndef divide(a,b):\r\n    return a/b
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/utils.py b/utils.py
+--- a/utils.py	(revision f239aadd8939e8e335cbfea6e7833aa57c69d62e)
++++ b/utils.py	(date 1782060859854)
+@@ -11,4 +11,4 @@
+     return a-b
+ 
+ def divide(a,b):
+-    return a/b
+\ No newline at end of file
++    return a/b
