@@ -1,0 +1,42 @@
+[
+{
+    "model": "sections.section",
+    "pk": 1,
+    "fields": {
+        "title": "насикомые",
+        "description": "насикомых  больше чем животных"
+    }
+},
+{
+    "model": "sections.section",
+    "pk": 2,
+    "fields": {
+        "title": "млекопитающие",
+        "description": ""
+    }
+},
+{
+    "model": "sections.section",
+    "pk": 3,
+    "fields": {
+        "title": "млекопитающие 1",
+        "description": "делятся на два вида 1 четырёх ногие 2 двуногие"
+    }
+},
+{
+    "model": "sections.section",
+    "pk": 4,
+    "fields": {
+        "title": "водные",
+        "description": "водные делятся на два вида. 1 водные , 2 земноводные"
+    }
+},
+{
+    "model": "sections.section",
+    "pk": 5,
+    "fields": {
+        "title": "птица",
+        "description": "ёж гордая птица- пнешь гордо летит"
+    }
+}
+]
