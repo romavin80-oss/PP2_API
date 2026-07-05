@@ -1,17 +1,11 @@
 from django.contrib import admin
+from django.contrib.auth import get_user_model
 
-from sections.models import Section, Content
+User = get_user_model()
 
-@admin.register(Section)
+@admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('id','title',)
-    list_filter = ('title',)
+    list_display = ('id', 'username', 'email', 'is_staff', 'is_active')
+    list_filter = ('is_staff', 'is_active')
     ordering = ('id',)
-    search_fields = ('title',)
-
-@admin.register(Content)
-class ContentAdmin(admin.ModelAdmin):
-    list_display = ('id','section','title',)
-    list_filter = ('section',)
-    ordering = ('id','section',)
-    search_fields = ('title',)
+    search_fields = ('username', 'email')

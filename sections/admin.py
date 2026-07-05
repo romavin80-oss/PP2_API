@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from sections.models import Section, Content
+from sections.models import Section, Content, Question
 
 
 @admin.register(Section)
@@ -17,3 +17,10 @@ class ContentAdmin(admin.ModelAdmin):
     list_filter = ('section',)
     ordering = ('id', 'section',)
     search_fields = ('title',)
+
+@admin.register(Question)
+class QuestionAdmin(admin.ModelAdmin):
+    list_display = ('id', 'section', 'question', 'answer')
+    list_filter = ('section',)
+    ordering = ('id', 'section',)
+    search_fields = ('question',)
