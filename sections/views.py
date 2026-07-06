@@ -13,70 +13,70 @@ from sections.paginators import SectionPaginator, ContentPaginator, QuestionPagi
 class SectionListApiView(ListAPIView):
     serializer_class = SectionListSerializer
     queryset = Section.objects.all()
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     pagination_class = SectionPaginator
 
 
 class SectionCreateApiView(CreateAPIView):
     serializer_class = SectionSerializer
-    # permission_classes = (IsAuthenticated, IsModerator | IsSuperuser)
+    permission_classes = (IsAuthenticated, IsModerator | IsSuperuser)
 
 
 class SectionRetrieveAPIView(RetrieveAPIView):
     serializer_class = SectionSerializer
     queryset = Section.objects.all()
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
 
 
 class SectionUpdateAPIView(UpdateAPIView):
     serializer_class = SectionSerializer
     queryset = Section.objects.all()
-    # permission_classes = (IsAuthenticated, IsModerator | IsSuperuser)
+    permission_classes = (IsAuthenticated, IsModerator | IsSuperuser)
 
 
 class SectionDestroyAPIView(DestroyAPIView):
     serializer_class = SectionSerializer
     queryset = Section.objects.all()
-    # permission_classes = (IsAuthenticated, IsSuperuser)
+    permission_classes = (IsAuthenticated, IsSuperuser)
 
 class ContentListApiView(ListAPIView):
     serializer_class = ContentListSerializer
     queryset = Content.objects.all()
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     pagination_class = ContentPaginator
 
 
 class ContentCreateApiView(CreateAPIView):
     serializer_class = ContentSerializer
-    # permission_classes = (IsAuthenticated, IsModerator | IsSuperuser)
+    permission_classes = (IsAuthenticated, IsModerator | IsSuperuser)
 
 
 class ContentRetrieveAPIView(RetrieveAPIView):
     serializer_class = ContentSerializer
     queryset = Content.objects.all()
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
 
 class ContentUpdateAPIView(UpdateAPIView):
     serializer_class = ContentSerializer
     queryset = Content.objects.all()
-    # permission_classes = (IsAuthenticated, IsModerator | IsSuperuser)
+    permission_classes = (IsAuthenticated, IsModerator | IsSuperuser)
 
 
 class ContentDestroyAPIView(DestroyAPIView):
     serializer_class = ContentSerializer
     queryset = Content.objects.all()
-    # permission_classes = (IsAuthenticated, IsSuperuser)
+    permission_classes = (IsAuthenticated, IsSuperuser)
 
 class QuestionListApiView(ListAPIView):
     serializer_class = QuestionSerializer
     queryset = Question.objects.all()
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     pagination_class = QuestionPaginator
 
 class QuestionRetrieveApiView(RetrieveAPIView):
     serializer_class = QuestionSerializer
     queryset = Question.objects.all()
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
 
     def post(self, request, *args, **kwargs):
         answers = [question.answer for question in Question.objects.all()]
