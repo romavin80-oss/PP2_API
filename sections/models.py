@@ -44,3 +44,18 @@ class Question(models.Model):
         verbose_name = _('Question')
         verbose_name_plural = _('Questions')
         ordering = ['section',]
+
+class Test(models.Model):
+    section = models.ForeignKey(Section, on_delete=models.CASCADE, verbose_name=_('Section'), related_name='tests')
+    title = models.CharField(max_length=150, verbose_name=_('Test Title'))
+    description = models.TextField(verbose_name=_('Test Description'), **NULLABLE)
+    questions = models.ManyToManyField(Question, verbose_name=_('Questions'), related_name='tests', blank=True)
+    is_active = models.BooleanField(default=True, verbose_name=_('Is Active'))
+
+    def __str__(self):
+        return f"{self.title} ({self.section.title})"
+
+    class Meta:
+        verbose_name = _('Test')
+        verbose_name_plural = _('Tests')
+        ordering = ['id']

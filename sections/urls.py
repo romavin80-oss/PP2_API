@@ -7,7 +7,7 @@ from sections.apps import SectionsConfig
 from sections.views import (
     SectionListApiView, SectionCreateApiView, SectionRetrieveAPIView, SectionUpdateAPIView, SectionDestroyAPIView,
     ContentListApiView, ContentCreateApiView, ContentRetrieveAPIView, ContentUpdateAPIView, ContentDestroyAPIView,
-    QuestionListApiView, QuestionRetrieveApiView
+    QuestionListApiView, QuestionRetrieveApiView, TestListApiView, TestCreateApiView, TestRetrieveAPIView, TestUpdateAPIView, TestDestroyAPIView
 )
 
 app_name = SectionsConfig.name
@@ -21,6 +21,7 @@ create = 'create/'
 update = 'update/'
 delete = 'delete/'
 int_pk = '<int:pk>/'
+test_path = 'test/'
 
 urlpatterns = [
     # section urlpatterns
@@ -40,5 +41,12 @@ urlpatterns = [
     # question urlpatterns
     path(p.join(question), QuestionListApiView.as_view(), name='question_list'),
     path(p.join(question, int_pk), QuestionRetrieveApiView.as_view(), name='question'),
+
+    # test urlpatterns
+    path(p.join(test_path), TestListApiView.as_view(), name='test_list'),
+    path(p.join(test_path, create), TestCreateApiView.as_view(), name='test_create'),
+    path(p.join(test_path, int_pk), TestRetrieveAPIView.as_view(), name='test_detail'),
+    path(p.join(test_path, int_pk, update), TestUpdateAPIView.as_view(), name='test_update'),
+    path(p.join(test_path, int_pk, delete), TestDestroyAPIView.as_view(), name='test_delete'),
 
 ] + router.urls

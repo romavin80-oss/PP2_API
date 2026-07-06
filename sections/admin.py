@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from sections.models import Section, Content, Question
+from sections.models import Section, Content, Question, Test
 
 
 @admin.register(Section)
@@ -24,3 +24,11 @@ class QuestionAdmin(admin.ModelAdmin):
     list_filter = ('section',)
     ordering = ('id', 'section',)
     search_fields = ('question',)
+
+@admin.register(Test)
+class TestAdmin(admin.ModelAdmin):
+    list_display = ('id', 'section', 'title', 'is_active')
+    list_filter = ('section', 'is_active')
+    ordering = ('id',)
+    search_fields = ('title', 'description')
+    filter_horizontal = ('questions',)

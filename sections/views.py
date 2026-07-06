@@ -2,12 +2,13 @@ from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveAPIView,
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
-from sections.models import Section, Content, Question
+from sections.models import Section, Content, Question, Test
 from sections.permissions import IsModerator, IsSuperuser
 from sections.serializers.section_serializers import SectionSerializer, SectionListSerializer
 from sections.serializers.content_serializers import ContentSerializer, ContentSectionSerializer, ContentListSerializer
 from sections.serializers.question_serializers import QuestionSerializer, QuestionSectionSerializer
 from sections.paginators import SectionPaginator, ContentPaginator, QuestionPaginator
+from sections.serializers.test_serializers import TestSerializer, TestDetailSerializer
 
 
 class SectionListApiView(ListAPIView):
@@ -88,3 +89,34 @@ class QuestionRetrieveApiView(RetrieveAPIView):
 
 class QuestionCreateApiView(CreateAPIView):
     serializer_class = QuestionSerializer
+
+from rest_framework.permissions import AllowAny
+
+class TestListApiView(ListAPIView):
+    serializer_class = TestSerializer
+    queryset = Test.objects.filter(is_active=True)
+    permission_classes = [AllowAny]
+    pagination_class = SectionPaginator
+
+
+class TestCreateApiView(CreateAPIView):
+    serializer_class = TestSerializer
+    permission_classes = [AllowAny]
+
+
+class TestRetrieveAPIView(RetrieveAPIView):
+    serializer_class = TestDetailSerializer
+    queryset = Test.objects.all()
+    permission_classes = [AllowAny]
+
+
+class TestUpdateAPIView(UpdateAPIView):
+    serializer_class = TestSerializer
+    queryset = Test.objects.all()
+    permission_classes = [AllowAny]
+
+
+class TestDestroyAPIView(DestroyAPIView):
+    serializer_class = TestSerializer
+    queryset = Test.objects.all()
+    permission_classes = [AllowAny]
