@@ -1,11 +1,13 @@
-from rest_framework.test import APITestCase
+from rest_framework.test import APITestCase, APIClient
 from rest_framework import status
 
-from sections.test_sections.utils import get_member_user, get_test_question
+from .utils import get_member_user, get_test_question
 
 
 class QuestionTestCase(APITestCase):
     def setUp(self):
+        self.client: APIClient = self.client
+
         self.user = get_member_user()
         response = self.client.post('/users/token/', {'email': self.user.email, 'password': 'qwerty'})
         self.access_token = response.json().get('access')
@@ -32,5 +34,6 @@ class QuestionTestCase(APITestCase):
         response = self.client.post(f'/question/{self.question.id}/', correct_answer)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.json().get('is_correct'), True)
+
         response = self.client.post(f'/question/{self.question.id}/', wrong_answer)
         self.assertEqual(response.json().get('is_correct'), False)

@@ -80,10 +80,14 @@ class QuestionRetrieveApiView(RetrieveAPIView):
     permission_classes = (IsAuthenticated,)
 
     def post(self, request, *args, **kwargs):
-        answers = [question.answer for question in Question.objects.all()]
-        answer = answers[self.kwargs.get('pk') - 1]
-        answer = answer.title.strip()
-        member_answer = request.data.get('member_answer').strip().lower()
+        try:
+            question = Question.objects.get(pk=self.kwargs.get('pk'))
+        except Question.DoesNotExist:
+            return Response({'error': 'Question not found'}, status=404)
+
+        answer = question.answer.title.strip().lower()
+        member_answer = request.data.get('member_answer', '').strip().lower()
+
         is_correct = member_answer == answer
         return Response({'is_correct': is_correct})
 

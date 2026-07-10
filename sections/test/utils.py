@@ -35,8 +35,8 @@ def get_test_section():
     return section
 
 def get_test_content():
-    sections = get_test_section()
-    content = Content.objects.create(sections=sections, title='Test Title Content', content='Test Content',)
+    section = get_test_section()
+    content = Content.objects.create(section=section, title='Test Title Content', content='Test Content',)
     return content
 
 def get_test_question():
@@ -47,3 +47,4 @@ def get_test_question():
         question='Test Question',
         answer=content,
     )
+    return question

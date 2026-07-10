@@ -1,11 +1,13 @@
-from rest_framework.test import APITestCase
+from rest_framework.test import APITestCase, APIClient
 from rest_framework import status
 
-from sections.test_sections.utils import get_admin_user, get_member_user, get_test_content
+from .utils import get_admin_user, get_member_user, get_test_content
 
 
 class ContentTestAdmin(APITestCase):
     def setUp(self):
+        self.client: APIClient = self.client
+
         self.user = get_admin_user()
         response = self.client.post('/users/token/', {'email': self.user.email, 'password': 'qwerty'})
         self.access_token = response.json().get('access')
@@ -52,6 +54,9 @@ class ContentTestAdmin(APITestCase):
 
 class ContentTestMember(APITestCase):
     def setUp(self):
+        # Подсказка для PyCharm, чтобы убрать желтое предупреждение для credentials
+        self.client: APIClient = self.client
+
         self.user = get_member_user()
         response = self.client.post('/users/token/', {'email': self.user.email, 'password': 'qwerty'})
         self.access_token = response.json().get('access')
@@ -79,4 +84,4 @@ class ContentTestMember(APITestCase):
     def test_15_content_delete_forbidden(self):
         response = self.client.delete(f'/content/{self.content.id}/delete/')
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
-        self.assertEqual(response.json().get('detail'), "You are not superuser.")
+        self.assertEqual(response.json().get('detail'), "You are not a superuser.")
