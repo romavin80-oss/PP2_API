@@ -33,3 +33,9 @@ def get_test_section():
         description='Описание тестового раздела'
     )
     return section
+
+def get_test_content():
+    sections = get_test_section()
+    content = Content.objects.create(sections=sections, title='Test Title Content', content='Test Content',)
+    return content
+

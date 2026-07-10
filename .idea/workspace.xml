@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5d606e3-b664-4ac5-af44-151545ab3fa3" name="Changes" comment="- Добавлен функционал вопросов ответов;&#10;-Модель добавлена в админку;&#10;- Созданы и проведены миграции;&#10;- Обновлена фикстура;">
+    <list default="true" id="c5d606e3-b664-4ac5-af44-151545ab3fa3" name="Changes" comment="- восстановлены настройки доступа и безопасности.">
+      <change afterPath="$PROJECT_DIR$/sections/test/test_02_content.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/test/test_01_section.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/test/test_01_section.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/test/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/test/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in test_01_section.py.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -53,6 +53,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PP2_API\sections\test" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -84,7 +89,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783231147755</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- восстановлены настройки доступа и безопасности.">
+      <option name="closed" value="true" />
+      <created>1783319282764</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1783319282764</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +126,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Добавлены данные из фикстуры;&#10;- Модели добавлены в админку." />
     <MESSAGE value="- Добавлен функционал вопросов ответов;&#10;-Модель добавлена в админку;&#10;- Созданы и проведены миграции;&#10;- Обновлена фикстура;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Добавлен функционал вопросов ответов;&#10;-Модель добавлена в админку;&#10;- Созданы и проведены миграции;&#10;- Обновлена фикстура;" />
+    <MESSAGE value="- восстановлены настройки доступа и безопасности." />
+    <option name="LAST_COMMIT_MESSAGE" value="- восстановлены настройки доступа и безопасности." />
   </component>
 </project>

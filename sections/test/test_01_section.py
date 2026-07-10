@@ -26,7 +26,6 @@ class SectionTestsAdmin(APITestCase):
         self.assertEqual(response.json().get('title'), "Test Section Create")
 
     def test_02_section_detail(self):
-        # ИСПРАВЛЕНИЕ 1: Сборка пути без 404 ошибки и правильное имя из utils.py
         response = self.client.get(reverse('sections:section_detail', kwargs={'pk': self.test_section.id}))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.json().get('title'), "Тестовый раздел")
@@ -48,7 +47,6 @@ class SectionTestsAdmin(APITestCase):
     def test_05_section_list(self):
         response = self.client.get(f'/section/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        # ИСПРАВЛЕНИЕ 2: Ожидаем "Тестовый раздел"
         self.assertEqual(response.json()['results'][0]['title'], "Тестовый раздел")
 
 
@@ -69,7 +67,6 @@ class SectionTestsMember(APITestCase):
         }
         response = self.client.post('/section/create/', data=data)
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
-        # ИСПРАВЛЕНИЕ 3: Исправлен регистр букв и слитно "недостаточно"
         self.assertEqual(response.json().get('detail'), 'У вас недостаточно прав для выполнения данного действия.')
 
     def test_07_section_delete_forbidden(self):
