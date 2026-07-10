@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5d606e3-b664-4ac5-af44-151545ab3fa3" name="Changes" comment="- восстановлены настройки доступа и безопасности.">
-      <change afterPath="$PROJECT_DIR$/sections/test/test_02_content.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/test/test_01_section.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/test/test_01_section.py" afterDir="false" />
+    <list default="true" id="c5d606e3-b664-4ac5-af44-151545ab3fa3" name="Changes" comment="- Написаны тесты для content.">
+      <change afterPath="$PROJECT_DIR$/sections/test/test_03_quetion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sections/test/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/test/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +95,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783319282764</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- Написаны тесты для section.">
+      <option name="closed" value="true" />
+      <created>1783660958566</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1783660958567</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- Написаны тесты для content.">
+      <option name="closed" value="true" />
+      <created>1783660997415</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1783660997415</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +141,8 @@
     <MESSAGE value="- Добавлены данные из фикстуры;&#10;- Модели добавлены в админку." />
     <MESSAGE value="- Добавлен функционал вопросов ответов;&#10;-Модель добавлена в админку;&#10;- Созданы и проведены миграции;&#10;- Обновлена фикстура;" />
     <MESSAGE value="- восстановлены настройки доступа и безопасности." />
-    <option name="LAST_COMMIT_MESSAGE" value="- восстановлены настройки доступа и безопасности." />
+    <MESSAGE value="- Написаны тесты для section." />
+    <MESSAGE value="- Написаны тесты для content." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Написаны тесты для content." />
   </component>
 </project>
