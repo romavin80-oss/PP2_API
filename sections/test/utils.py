@@ -1,5 +1,5 @@
 from users.models import User, UserRoles
-from sections.models import Section, Content, Question
+from sections.models import Section, Content, Question, Test
 
 
 def get_admin_user():
@@ -48,3 +48,16 @@ def get_test_question():
         answer=content,
     )
     return question
+
+
+def get_test_test():
+    question1 = get_test_question()
+    section = question1.section
+    test = Test.objects.create(
+        section=section,
+        title="Финал по зоологии",
+        description="Итоговый тест проверки знаний о животных",
+        is_active=True
+    )
+    test.questions.add(question1)
+    return test

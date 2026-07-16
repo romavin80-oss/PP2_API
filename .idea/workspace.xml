@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5d606e3-b664-4ac5-af44-151545ab3fa3" name="Changes" comment="- Написаны тесты для question.&#10;- Активировали тесты для section.&#10;-обновили утилиты для тестирования.">
-      <change beforePath="$PROJECT_DIR$/sections/test/test_02_content.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/test/test_02_content.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/test/test_03_quetion.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/test/test_03_quetion.py" afterDir="false" />
+    <list default="true" id="c5d606e3-b664-4ac5-af44-151545ab3fa3" name="Changes" comment="- исправил ошибки в коде.">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements_docker.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sections/test/test_04_test_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/migrations/0003_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/migrations/0003_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/serializers/content_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/serializers/content_serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/serializers/question_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/serializers/question_serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sections/test/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/test/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sections/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sections/views.py" afterDir="false" />
     </list>
@@ -18,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Dockerfile" />
         <option value="Python Script" />
       </list>
     </option>
@@ -121,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783661942861</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- исправил ошибки в коде.">
+      <option name="closed" value="true" />
+      <created>1783664647053</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1783664647053</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +172,7 @@
     <MESSAGE value="- Написаны тесты для section." />
     <MESSAGE value="- Написаны тесты для content." />
     <MESSAGE value="- Написаны тесты для question.&#10;- Активировали тесты для section.&#10;-обновили утилиты для тестирования." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Написаны тесты для question.&#10;- Активировали тесты для section.&#10;-обновили утилиты для тестирования." />
+    <MESSAGE value="- исправил ошибки в коде." />
+    <option name="LAST_COMMIT_MESSAGE" value="- исправил ошибки в коде." />
   </component>
 </project>

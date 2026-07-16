@@ -13,7 +13,7 @@ class ContentSerializer(ModelSerializer):
 class ContentSectionSerializer(ModelSerializer):
     class Meta:
         model = Content
-        fields = ('id', 'title')
+        fields = ('id', 'content', 'title')
 
 
 class ContentListSerializer(ModelSerializer):

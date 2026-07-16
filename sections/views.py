@@ -74,6 +74,7 @@ class QuestionListApiView(ListAPIView):
     permission_classes = (IsAuthenticated,)
     pagination_class = QuestionPaginator
 
+
 class QuestionRetrieveApiView(RetrieveAPIView):
     serializer_class = QuestionSerializer
     queryset = Question.objects.all()
@@ -86,6 +87,7 @@ class QuestionRetrieveApiView(RetrieveAPIView):
             return Response({'error': 'Question not found'}, status=404)
 
         answer = question.answer.title.strip().lower()
+
         member_answer = request.data.get('member_answer', '').strip().lower()
 
         is_correct = member_answer == answer
